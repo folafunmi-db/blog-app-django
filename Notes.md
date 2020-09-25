@@ -12,8 +12,21 @@
 
 ## Database models
 
-ForeignKey allows for many-to-one relationship such that the user can be the author of many different blog posts but not the other way around. Using `ForeignKey` the  `on_delete` needs to be defined.
+ForeignKey allows for many-to-one relationship such that the user can be the author of many different blog posts but not the other way around. Using `ForeignKey` the `on_delete` needs to be defined.
+
+Create a migration record for the database model and migrate the change in the database. This is done using the commands:
+
+> `python manage.py makemigrations blog`
+
+Then,
+
+> `python manage.py migrate blog`
 
 ## Admin
 
+- Create an admin using the command `python manage.py createsuperuser`
+- Register the new model in admin.py
 
+Upon completing the database model, it's time to create the necessary views, URLs and templates.
+
+## URLs
