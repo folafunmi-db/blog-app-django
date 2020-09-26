@@ -1,0 +1,7 @@
+{% extends 'base.html' %} {% block content %}
+<div class="post_entry">
+    {% comment %} using the context object name set in views.py {% endcomment %}
+  <h2>{{ anything.title }}</h2>
+  <p>{{ anything.body }}</p>
+</div>
+{% endblock content %}
