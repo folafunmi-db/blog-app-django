@@ -103,3 +103,16 @@ Finally, test_post_detail_view tests that our detail page works as expected and 
 With any user input there are security concerns (XSS), proper error handling is therefore required and there are UI considerations.
 
 Django's built-in Forms abstracts away much of the difficulty and provides a rich set of tools to handle common use cases working with forms.
+
+To add a new post page:
+- Add url to base html with {% url 'post_new' %}
+- Add URLConf path to app-level urls.py (blog/urls.py) using the BlogCreateView class
+- Define the BlogCreateView class in views.py
+- Added the 'post_new' template
+
+>The `{% csrf_token %}` is django's provision to pretext our form fro cross-site scripting attacks.
+>**USE IT FOR ALL DJANGO FORM**
+
+We use the POST methos to specify that data is being sent.
+The output form of the data used is `{{ form.as_p }}` which renders it within `<p>` tags.
+Finally the input type of _submit_ is assigned the value of _"Save"_
