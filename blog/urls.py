@@ -11,4 +11,5 @@ urlpatterns = [
         views.BlogDetailView.as_view(),
         name="post_detail",
     ),
+    path('post/new/', view.BlogCreateView.as_view(), name='post_new'),
 ]

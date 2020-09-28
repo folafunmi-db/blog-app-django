@@ -97,3 +97,9 @@ Then we use `test_post_list_view` to confirm that our homepage returns a 200 STA
 Finally, test_post_detail_view tests that our detail page works as expected and that an incorrect page returns a 404.
 
 >It's always good to test that something does exist and that something incorrect doesn't exist in your test
+
+## Forms
+
+With any user input there are security concerns (XSS), proper error handling is therefore required and there are UI considerations.
+
+Django's built-in Forms abstracts away much of the difficulty and provides a rich set of tools to handle common use cases working with forms.
